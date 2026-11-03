@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Personal</string>
+    <string name="prompt_type">选择收支类型</string>
+    <string name="prompt_category">选择收支分类</string>
+</resources>

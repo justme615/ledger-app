@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F4F6FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="个人记账本"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#202B45"
+            android:paddingBottom="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="#DDE9FF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前余额"
+                android:textColor="#405579"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="当前余额：0.00 元"
+                android:textColor="#183D85"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:paddingTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="总收入：0.00 元"
+                android:textColor="#147D55"
+                android:textSize="16sp"
+                android:paddingTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="总支出：0.00 元"
+                android:textColor="#C34343"
+                android:textSize="16sp"
+                android:paddingTop="6dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加收支记录"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#202B45"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp" />
+
+        <Spinner
+            android:id="@+id/spType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/record_types"
+            android:prompt="@string/prompt_type" />
+
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/record_categories"
+            android:prompt="@string/prompt_category" />
+
+        <EditText
+            android:id="@+id/etAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入金额"
+            android:inputType="numberDecimal|numberSigned"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="日期，例如 2026-10-17"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="备注（可不填）"
+            android:inputType="textCapSentences"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加记录"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="收支明细"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#202B45"
+            android:paddingTop="20dp"
+            android:paddingBottom="8dp" />
+
+        <ListView
+            android:id="@+id/lvRecords"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:divider="#DCE1EA"
+            android:dividerHeight="1dp"
+            android:nestedScrollingEnabled="true" />
+
+    </LinearLayout>
+</ScrollView>
